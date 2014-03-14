@@ -11,5 +11,6 @@ garbage-collect-states 0
 viewer-use-shaders #t
 viewer-resize-window #t
 viewer-set-cam-lens #t
+viewer-use-antialiasing #t
 
 bullet-filter-algorithm	groups-mask

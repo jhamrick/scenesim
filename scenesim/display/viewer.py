@@ -68,7 +68,9 @@ class Viewer(ShowBase, object):
         if use_shaders:
             self.render.setShaderAuto()
         # Set antialiasing on
-        self.render.setAntialias(AntialiasAttrib.MAuto)
+        use_aa = ConfigVariableBool('viewer-use-antialiasing', '#t')
+        if use_aa.getValue():
+            self.render.setAntialias(AntialiasAttrib.MAuto)
         # Camera
         self.camera_rot = self.render.attachNewNode("camera_rot")
         self.cameras = self.camera_rot.attachNewNode("cameras")
